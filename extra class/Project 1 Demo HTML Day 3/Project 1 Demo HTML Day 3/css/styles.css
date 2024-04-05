@@ -1,0 +1,137 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* 
+    Utilities 
+*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* 
+    Structure / General
+*/
+body {
+    background-color: olivedrab;
+}
+
+.container {
+    width: 800px;
+    margin: 35px auto; /* centers content */
+    border: 1px solid black;
+    padding: 50px;
+    background-color: white;
+}
+
+/* 
+    Typography
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p, td, li, figcaption {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3em;
+}
+h1 {
+    font-size: 64px;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+h2 {
+    font-size: 48px;
+    color: darkolivegreen;
+    margin: 0;
+    margin-top: 1.0em;
+    padding-top: 0.5em;
+    border-top: 3px dashed darkolivegreen;
+}
+h3 {
+    font-size: 36px;
+    margin: 1.5em 0 0.5em;
+}
+h4 {
+    font-size: 24px;
+    margin: 1.5em 0 0.5em;
+}
+
+/*
+    Links 
+*/
+a:link, a:visited {
+    color: purple;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: orangered;
+    text-decoration: underline;
+}
+
+/* 
+    Images
+*/
+img {
+    /* tells image to stay within parent container */
+    width: 100%;
+    display: block;
+}
+figure{
+    margin: 2.0rem 0;
+}
+figcaption{
+    margin-top:1.0em;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;    
+}
+/* 
+    Page
+*/
+.date {
+    font-weight: bold;
+    font-size: smaller;
+    margin-bottom: 2.0em;
+}
+
+table{
+    border-collapse: collapse;
+    margin:0.5em 0 2.0em; 
+}
+td{
+    border-right: 2px solid black; 
+    padding-right: 1.0em;
+}
+
+.last-element{
+    padding-left: 1.0em;
+    border:none;
+}
+
+.ingredients{
+    background-color: blanchedalmond;
+    padding: 1.0em 2.0em 3.0em;
+}
+ul li{
+    line-height: 2.0em;
+}
+
+ol li{
+    padding-bottom: 1.0em;
+}
+.see-more{
+    margin-top: 3.0rem;
+    border-top: 6px double darkolivegreen;
+    padding-top: 1.0rem;
+    padding-bottom: 2.0rem;
+}

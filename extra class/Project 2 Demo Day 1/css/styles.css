@@ -1,0 +1,143 @@
+/* natural box model */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* START STYLES HERE */
+body {
+  background: url('../images/Omega_Nebula.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 2000px;
+}
+
+.quote {
+  position: relative;
+  width: 650px;
+  margin: 150px auto 0;
+  padding: 1.0em 2.0em;
+  border-radius: 5%;
+  text-shadow: 1px 1px 1px black;
+  /* border-right: 3px solid white;
+  border-bottom: 3px solid white; */
+  /* box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.35); */
+  /* opacity: 0.5; */
+  /* background: rgba(34,193,195,0.8); */
+  /* background: linear-gradient(162deg, rgba(34,193,195,0.8) 0%, rgba(150,190,116,0.8) 52%, rgba(253,187,45,0.8) 100%); */
+}
+
+p, q {
+  position: relative;
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 36px;
+  line-height: 1.1em;
+}
+.quote-text::before{
+  content: open-quote;
+  position: absolute;
+  top: 0px;
+  left: -35px;
+  font-size: 72px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: gold;
+}
+.quote-author {
+  font-size: 24px;
+  text-align: right;
+}
+.star {
+  color: gold;
+  font-weight: bold;
+}
+
+.astronaut{
+  width: 175px;
+  /* Challenge 1 */
+  /* width: 175px;
+  position: fixed;
+  top: 0;
+  right: 0; */
+
+  /* Challenge 2 */
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+
+  /* Challenge 3 */
+  
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  z-index: -100;
+}
+
+/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+/* MEDIA QUERIES FROM LARGEST TO SMALLEST */
+/* Extra small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) {
+
+} */
+
+/* Small devices (landscape phones, less than 768px) */
+/* @media (max-width: 767.98px) {
+
+} */
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (max-width: 991.98px) {
+
+} */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) {
+
+} */
+
+/* Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width */

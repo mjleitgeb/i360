@@ -1,0 +1,79 @@
+body {
+  background-color: gainsboro;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  UTILITIES 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 48
+}
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  /* from Bootstrap 5 */
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  NAVIGATION 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+nav {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+nav li {
+  list-style-type: none;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.menu-button span {
+  font-size: 36px;
+}
+.menu-button:hover {
+  color: fuchsia;
+  cursor: pointer;
+}
+.menu-item {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+.menu-item a:hover {
+  color: fuchsia;
+}
+.menu-item a {
+  color: black;
+  font-size: 36px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.6rem 1.2rem 0.4rem 1.0rem;
+}
+
+/* referenced in JS */
+.show {
+  /* using a transition, so display: none; as used in class won't work */
+  visibility: visible;
+  opacity: 1;
+}

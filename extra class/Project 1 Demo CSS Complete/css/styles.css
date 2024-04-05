@@ -1,0 +1,162 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+body {
+    background-color: olivedrab;
+}
+
+.container {
+    width: 800px;
+    margin: 35px auto; /* centers content */
+    padding: 50px 50px 60px;
+    background-color: white;
+    /* border-width: 4px;
+    border-style: dashed solid;
+    border-color: darkolivegreen; */
+    border-bottom: 4px solid darkolivegreen;
+    border-right: 4px solid darkolivegreen;
+    border-radius: 12px;
+}
+
+/* 
+    Typography
+    https://www.lifewire.com/web-safe-font-stacks-3467429
+    Or VS Code will suggest font stacks after you type in "font-family:"
+*/
+
+h1, h2, h3, h4, h5, h6, figcaption {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p, td, li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+h2 {
+    border-top: 2px dashed forestgreen;
+    margin: 2.0em 0 0.5em;
+    padding-top: 1.0em;
+    font-size: 36px;
+    /* font-weight: normal;
+    font-style: italic; */
+}
+
+h3 {
+    font-size: 28px;
+    color: forestgreen;
+    margin: 2.0em 0 1.0em;
+}
+
+h4 {
+    margin-top: 1.0em;
+    font-size: 22px;
+    color: forestgreen;
+}
+
+p {
+    font-size: 110%;
+    line-height: 1.4em;
+    color: #222222;
+}
+
+/* 
+    Links
+*/
+a:link, a:visited {
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: orange;
+    text-decoration: underline;
+}
+
+/*
+    Tables
+*/
+td {
+    padding: 8px 16px;
+}
+.divider-line {
+    border-right: 3px solid olivedrab;
+    padding-left: 0;
+}
+
+/*
+    Images
+*/
+figure {
+    margin: 2.0em 0;
+}
+
+img {
+    /* tells image to stay within parent container */
+    width: 100%;
+    display: block;
+}
+
+figcaption {
+    margin-top: 1.0em;
+}
+
+.float-left {
+    float: left;
+    width: 48%;
+}
+.float-right {
+    float: right;
+    width: 48%;   
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*
+    Page
+*/
+.date {
+    font-size: 100%;
+    margin-bottom: 2.0em;
+}
+.ingredients {
+    background-color: whitesmoke;
+    padding: 25px 25px 40px;
+    margin-top: 45px;
+}
+ul li {
+    line-height: 2.0em;
+}
+ol li {
+    padding-bottom: 1.0em;
+    line-height: 1.4em;
+}
+.helpful {
+    background-color: whitesmoke; 
+    padding: 12px;
+}

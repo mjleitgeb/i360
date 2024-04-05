@@ -1,0 +1,312 @@
+/* apply a natural box layout model to all elements */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* RWD tag to visually indicate media query breaks */
+#tag {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 25px;
+	height: 25px;
+	background-color: #CC0000;
+}
+
+/* PAGE THEME COLORS - PLEASE USE */
+:root {
+    --menu-color: gold;
+    --iu-red: rgb(153, 0, 0);
+    --iu-grey: rgb(237, 235, 235);
+    --iu-black: rgb(69, 56, 43);
+}
+
+/* Extra small devices (phones, less than 768px) */
+
+/* 
+    GENERAL
+*/
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+/* Navigation */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 48
+}
+  
+.openbtn {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+}
+.openbtn:hover {
+    color: black;
+    cursor: pointer;
+}
+.menu-button {
+    font-size: 36px !important;
+    position: relative;
+    top: 6px;
+    left: -4px;
+}
+.menu-text {
+    font-size: 12px;
+    display: block;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+/* The side navigation menu */
+.all-over-bkg {
+    display: none;
+}
+
+.is-visible {
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    display: block;
+}
+
+#mySidenav {
+    z-index: 10000;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: white;  
+}
+  
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+/* .
+    TYPOGRAPHY
+*/
+h1, h2, h3, h4, h5, h6, p, li, a, td, figcaption {
+    font-family: 'PT Sans', serif;
+    margin: 0.5em;
+    line-height: auto;
+    
+
+    /* also adjust margin and line-height */
+}
+
+h1 {
+    font-weight: normal;
+    padding: 0.5em;
+    text-align: center;
+
+    /* also adjust padding and font weight */
+    /* adjust H1 size in the media queries */
+    
+}
+
+h1 span {
+    font-weight: bold;
+    
+    /* adjust font weight */
+}
+
+h2 {
+    font-size: 36px;
+    margin-left: 400px;
+    
+}
+.h2-flex{
+    padding: 0.75em;
+}
+
+h3 {
+    letter-spacing: 2px;
+    margin-left: 400px;
+    font-size: 30px;
+
+}
+
+p {
+    font-size: 20px;
+    width: 800px;
+    margin-left: 400px;
+}
+
+/*
+    HEADER
+*/
+header h1, .container {
+    /* should stretch up to 800px wide and center on the screen */
+    text-align: center;
+    color: var(--iu-grey);
+}
+
+header {
+    background-color: var(--iu-red);
+    margin: 0;
+    padding: 1.0em;
+}
+
+/*
+    MAP
+*/
+#map { 
+    /* adjust map height in the media queries  */
+    height: 180px; 
+}
+
+/* Main */
+.racing-stripes {
+background: repeating-linear-gradient(
+    -45deg,
+    #FFFFFF,
+    #FFFFFF 20px,
+    #D3D3D3 15px,
+    #D3D3D3 30px);
+    height: 50px;
+    /* https://css-tricks.com/stripes-css/ */
+    
+}
+
+article {
+
+    /* add padding */
+}
+
+/* Add additional page styles here */
+
+
+footer {
+    padding: 2.0em;
+    /* set background color and use margin to push it down from the rest of the content */
+}
+
+/*
+    BUTTONS AND LINKS
+*/
+.h3bg{
+    background-color: var(--iu-grey);
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    
+}
+.buttoncontainer{
+    margin-left: 400px;
+}
+.button {
+    background-color: var(--iu-red);
+    border: 3px solid var(--iu-red);
+    border-radius: 20px;
+    color: white;
+    padding: 0.5em 1.0em;
+    margin: 1.0em 2.0em 0 0;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out,color .2s ease-out,border-color .18s ease-out;
+    
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--iu-red);
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    font-weight: bold;
+}
+.challenges-img{
+    width: 350px;
+    float: left;
+    max-width: 100%;
+    margin-left: 400px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+}
+.img-text{
+    width: 500px;
+}
+
+/*
+    MEDIA QUERIES
+*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    #tag { background-color: #FF9900; }
+    #map { height: 180px; }
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    #tag { background-color: #00AA88; }
+    #map { height: 240px; }
+
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    #tag { background-color: #674EA7; }
+    #map { height: 300px; }
+    
+
+}

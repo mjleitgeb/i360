@@ -1,0 +1,137 @@
+/* natural box model */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*
+    UTILITIES
+*/
+
+/* hides an element, but not from screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* no break */
+.nobr {
+    white-space: nowrap;
+}
+
+/*
+    STRUCTURE
+    Set a background color
+*/
+body{
+    background-color:violet;
+}
+
+.container {
+    width: 800px;
+    margin: 35px auto; /* centers the container */
+    border: 1px solid violet;
+    padding: 50px 50px 60px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+/*
+    TYPOGRAPHY
+    https://www.thoughtco.com/web-safe-font-stacks-3467429
+    Set a default font for all text-containing HTML elements
+*/
+h1, h3, figcaption {
+    font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+}
+
+p, td, li {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+/*
+    IMAGES
+    You need to place AT LEAST two images in your HTML
+    And 1+ of them needs to be styled using figure / img / figcaption
+*/
+img {
+    width: 100%;
+    display: block;
+}
+
+figcaption {
+    margin-top: 1.0em;
+}
+
+/* clearfix - in case you decide to float elements */
+.group::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+    LINKS
+    Set for all four states we discussed in class
+*/
+a:link, a:visited {
+    color:darkorchid;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color:palevioletred;
+    text-decoration: underline;
+}
+
+
+/*
+    TABLES
+    You need at least one table in your project
+*/
+table{
+    border-top: 2px dashed violet;
+    padding-top: 1.0em;
+}
+td {
+    padding: 8px 16px;
+    font-weight: bold;
+}
+.divider-line {
+    border-right: 3px solid darkviolet;
+    padding-left: 0.5em;
+}
+
+
+/*
+    RECIPE PAGE
+    Try assigning classes to some of the paragraphs to differentiate their styles e.g. subtitle or byline
+*/
+.alton{
+    font-size: 100%;
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+}
+.recipe{
+    font-size: 85%;
+    font-style: italic;
+    margin-top: 0.5em;
+}
+.show{
+    font-size: 125%;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.episode{
+    font-size: 125%;
+    font-weight: bold;
+    margin-top: 0.5em;
+}

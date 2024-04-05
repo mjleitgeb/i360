@@ -1,0 +1,170 @@
+/* natural box model */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* START STYLES HERE */
+/* body edits that include background image and make it cover the page */
+body{
+  background: url('../images/rainbow-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* quote class that provides styling for the quote as a whole*/
+.quote {
+  position: relative;
+  width: 650px;
+  margin: 200px auto 0;
+  padding: 1.0em 2.0em;
+  border-radius: 5%;
+  text-shadow: 1px 1px 1px royalblue;
+}
+/* tags that will apply styling to the p and q tags*/
+p, q {
+  position: relative;
+  color: khaki;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 34px;
+  line-height: 1.2em;
+}
+/* using the before concept in css to add an open quote before the text and styling it */
+.quote-text::before{
+  content: open-quote;
+  position: absolute;
+  top: 3px;
+  left: -30px;
+  font-size: 62px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: lightpink;
+}
+
+/* using the after concept in css to add an closed quote after the text and styling it */
+.quote-text::after{
+  content: close-quote;
+  position: absolute;
+  bottom: -5px;
+  right: 325px;
+  font-size: 62px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: lightpink;
+}
+/* quote-author class that will style only the name of the song and artist*/
+.quote-author {
+  font-size: 24px;
+  text-align: right;
+}
+/* classes for each separate span tag to edit the letters of "rainbow" to follow the color pattern of a rainbow*/
+.r {
+  color: red;
+  font-weight: bold;
+}
+.a {
+  color: orange;
+  font-weight: bold;
+}
+.i {
+  color: yellow;
+  font-weight: bold;
+}
+.n {
+  color: green;
+  font-weight: bold;
+}
+.b {
+  color: blue;
+  font-weight: bold;
+}
+.o {
+  color: indigo;
+  font-weight: bold;
+}
+.w {
+  color: violet;
+  font-weight: bold;
+}
+
+/* img tags that help edit the size and positioning of the images */
+.small-rainbow{
+  width: 175px;
+  position: fixed;
+  top: 180px;
+  left: 300px;
+}
+.ukulele{
+  width: 80px;
+  position: fixed;
+  bottom: 280px;
+  right: 400px;
+  transform: rotate(55deg);
+  z-index: -100;
+}
+/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+/* MEDIA QUERIES FROM LARGEST TO SMALLEST */
+/* Extra small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) {
+
+} */
+
+/* Small devices (landscape phones, less than 768px) */
+/* @media (max-width: 767.98px) {
+
+} */
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (max-width: 991.98px) {
+
+} */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) {
+
+} */
+
+/* Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width */

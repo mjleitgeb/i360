@@ -1,0 +1,322 @@
+/* natural box model */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* UTILITIES */
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* COLORS */
+/* Will create a warning in the W3C CSS validator */
+/* Ignore that - CSS variables are fine to use */
+:root {
+  --slategrey: #434B63;
+  --peach: #FFDBBA;
+  --coral: #F27935;
+  --turquoise: #4ECDC4;
+  --cream: #fef9ed;
+  --grey: #6C7A89;
+  --red: #f2354f;
+}
+
+body {
+  background: black;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+/* TYPOGRAPHY & LINKS */
+/* font-family: 'Ovo', serif; */
+/* font-family: 'Montserrat', sans-serif; */
+/* links are coral / peach  */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ovo', serif;
+  color: white;
+
+}
+p, figcaption, li, address  {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}
+a:link, a:visited {
+  color: var(--coral);
+ 
+}
+a:hover, a:active {
+  color: var(--peach);
+}
+
+ 
+
+
+/* NAVIGATION */
+/* TODO: Add mobile-friendly navigation to the upper-right corner of the window */
+nav {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  position: fixed;
+  top: 0;
+  right: 20px;
+  color: white;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+nav li {
+  list-style-type: none;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.menu-button span {
+  font-size: 36px;
+}
+.menu-button:hover {
+  color: var(--coral);
+  cursor: pointer;
+}
+.menu-item {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+.menu-item a:hover {
+  color: var(--coral);
+}
+.menu-item a {
+  color: black;
+  font-size: 36px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.6rem 1.2rem 0.4rem 1.0rem;
+}
+.show {
+  /* using a transition, so display: none; as used in class won't work */
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+/* HOME & BASE STRUCTURE */
+/* Set the background to counter.jpg */
+#home {
+  background: url(../images/counter.jpg);
+  position: static;
+  background-size: 90%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100%;
+
+}
+.dots {
+  /* This sets a second background - because it's generated we can't use the multiple bkgs technique from Project 2 */
+  /* http://www.patternify.com/ */
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAJUlEQVQYV2NkYGBIY4CAWVAaTDHik0BWCGeDdCADuLFES8B1AwBXcgQHq6hTZwAAAABJRU5ErkJggg==) repeat;
+  display: flex;
+  justify-content: end;
+  flex: flex-end;
+
+}
+.container {
+  display: flex;
+  flex-direction: column;
+
+}
+.logo {
+  width: 220px;
+  padding-top: 3.0em;
+  margin: 0 auto;
+}
+h1{
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
+h2{
+  text-align: center;
+  color: var(--peach);
+  margin-top: 0;
+  font-style: italic;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+#home article {
+  display: flex;
+  background: rgb(67,75,99);
+  background: linear-gradient(0deg, rgba(67,75,99,1) 0%, rgba(78,205,196,1) 100%);
+
+}
+#menu article {
+  display: flex;
+  justify-content: center;
+}
+#menu section h2{
+  margin: 1.0em auto;
+  padding: 0.5em;
+  border: solid 2px var(--peach);
+  border-radius: 5px;
+  width: 300px;
+}
+#menu section h1{
+  color: var(--peach);
+}
+#menu .sizes{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border: solid 2px var(--peach);
+  border-radius: 5px;
+  width: 450px;
+  margin: 1.0em auto;
+}
+#menu p{
+  padding: 0 1.2em;
+}
+#menu table{
+  padding: 0.5em;
+  margin: 1.5em;
+}
+/* TODO: Style the typography for #home  */
+
+
+
+
+/* Decorative box */
+.line {
+  border: thin solid white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 1.0em;
+  margin: 1.0em;
+}
+
+/* ASIDE */
+/* TODO: style the aside and any typography you need for aside */
+aside {
+  background-color: var(--cream);
+  text-align: center;
+  color:var(--coral);
+  padding: 1.5em;
+}
+aside h3{
+  color: var(--coral);
+}
+
+
+/* MENU PAGE */
+/* TODO: Override any styles you need to from #home */
+/* Use #menu before the selectors if they repeat from #home */
+/* Use the class name if there is a class set */
+#menu {
+  background: rgb(67,75,99);
+  background: linear-gradient(90deg, rgba(67,75,99,1) 35%, rgba(108,122,137,1) 100%);
+  color: var(--peach);
+}
+
+/* TODO: style the rest of the elements and typography for the menu page */
+#menu .coffees{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+table{
+  display:flex;
+  flex-direction: row;
+}
+
+/* FOOTER */
+/* Style the footer */
+footer {
+  background: var(--slategrey);
+  display: flex;
+  flex-direction: column;
+  padding: 3.0em 1.5em;
+}
+/* TODO: style the rest of the footer */
+footer address{
+  color: white;
+  text-align: left;
+}
+footer p{
+  color: white;
+  text-align: left;
+}
+footer a{
+  color: var(--coral);
+  text-align: left;
+}
+footer a:visited{
+  color: var(--peach);
+  text-align: left;
+}
+
+
+
+/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
+
+/* TODO: Adjust the size of the .container in index.html */
+/* TODO: Adjust any headline sizes (as needed) */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .container{
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+  }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container{
+    display: flex;
+    justify-content: end;
+    max-width: 65%;
+  }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container{
+    display: flex;
+    justify-content: end;
+    max-width: 45%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container{
+    display: flex;
+    justify-content: end;
+  }
+}
